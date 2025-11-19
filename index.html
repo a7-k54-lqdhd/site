@@ -756,13 +756,13 @@
                 // Modal functions
                 function showModal(member) {
                     const photoPath = member.photo || `images/${member.id}.jpg`;
-                    
+
                     // Update modal avatar with image
                     modalAvatar.innerHTML = `
                         <img src="${photoPath}" alt="${member.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                         <span class="modal-avatar-fallback" style="display: none;">${member.id}</span>
                     `;
-                    
+
                     modalName.textContent = member.name;
                     modalId.textContent = `#${member.id}`;
 
@@ -895,12 +895,22 @@
                         <div class="avatar" data-photo="${
                             m.photo || `images/${m.id}.jpg`
                         }">
-                            <img src="${m.photo || `images/${m.id}.jpg`}" alt="${m.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                            <span class="avatar-fallback" style="display: none;">${m.id}</span>
+                            <img src="${
+                                m.photo || `images/${m.id}.jpg`
+                            }" alt="${
+                            m.name
+                        }" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                            <span class="avatar-fallback" style="display: none;">${
+                                m.id
+                            }</span>
                         </div>
                         <div class="details">
                             <h2>${m.name}</h2>
-                            <p><strong>Sở thích:</strong> ${m.hobbies.length > 150 ? m.hobbies.substring(0, 150) + '...' : m.hobbies}</p>
+                            <p><strong>Sở thích:</strong> ${
+                                m.hobbies.length > 150
+                                    ? m.hobbies.substring(0, 150) + "..."
+                                    : m.hobbies
+                            }</p>
                             <p><strong>Nguyện vọng ĐH:</strong> ${
                                 m.aspiration
                             }</p>
@@ -1018,21 +1028,28 @@
                         if (e.key === "ArrowLeft") prev();
                     });
 
-                    // Mouse wheel / scroll navigation
+                    // Mouse wheel / scroll navigation (desktop only)
                     let scrollTimeout;
-                    carousel.addEventListener(
-                        "wheel",
-                        (e) => {
-                            e.preventDefault();
+                    const isMobile =
+                        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                            navigator.userAgent
+                        ) || window.innerWidth <= 768;
 
-                            clearTimeout(scrollTimeout);
-                            scrollTimeout = setTimeout(() => {
-                                if (e.deltaY > 0) next();
-                                else if (e.deltaY < 0) prev();
-                            }, 50);
-                        },
-                        { passive: false }
-                    );
+                    if (!isMobile) {
+                        carousel.addEventListener(
+                            "wheel",
+                            (e) => {
+                                e.preventDefault();
+
+                                clearTimeout(scrollTimeout);
+                                scrollTimeout = setTimeout(() => {
+                                    if (e.deltaY > 0) next();
+                                    else if (e.deltaY < 0) prev();
+                                }, 50);
+                            },
+                            { passive: false }
+                        );
+                    }
 
                     // Touch/swipe support
                     let touchStartX = 0;
