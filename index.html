@@ -902,13 +902,11 @@
                         );
                         carousel.appendChild(imgComment);
 
+                        const photoPath = m.photo || `images/${m.id}.jpg`;
+
                         card.innerHTML = `
-                        <div class="avatar" data-photo="${
-                            m.photo || `images/${m.id}.jpg`
-                        }">
-                            <img src="${
-                                m.photo || `images/${m.id}.jpg`
-                            }" alt="${
+                        <div class="avatar" data-photo="${photoPath}">
+                            <img loading="lazy" data-src="${photoPath}" alt="${
                             m.name
                         }" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                             <span class="avatar-fallback" style="display: none;">${
@@ -959,6 +957,12 @@
                             card.style.pointerEvents = "auto";
                             card.onclick = () => showModal(filteredMembers[i]);
 
+                            // Load image for active card and adjacent cards
+                            const img = card.querySelector("img");
+                            if (img && img.dataset.src && !img.src) {
+                                img.src = img.dataset.src;
+                            }
+
                             // Add click event to avatar for image view
                             const avatar = card.querySelector(".avatar");
                             if (avatar) {
@@ -972,10 +976,22 @@
                             card.classList.add("left");
                             card.style.pointerEvents = "auto";
                             card.onclick = null; // click disabled per request
+
+                            // Preload left card image
+                            const img = card.querySelector("img");
+                            if (img && img.dataset.src && !img.src) {
+                                img.src = img.dataset.src;
+                            }
                         } else if (diff === 1) {
                             card.classList.add("right");
                             card.style.pointerEvents = "auto";
                             card.onclick = null; // click disabled per request
+
+                            // Preload right card image
+                            const img = card.querySelector("img");
+                            if (img && img.dataset.src && !img.src) {
+                                img.src = img.dataset.src;
+                            }
                         } else if (diff === 2) {
                             card.classList.add("far-right");
                             card.style.pointerEvents = "none";
