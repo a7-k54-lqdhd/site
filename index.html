@@ -900,7 +900,7 @@
                         </div>
                         <div class="details">
                             <h2>${m.name}</h2>
-                            <p><strong>Sở thích:</strong> ${m.hobbies}</p>
+                            <p><strong>Sở thích:</strong> ${m.hobbies.length > 150 ? m.hobbies.substring(0, 150) + '...' : m.hobbies}</p>
                             <p><strong>Nguyện vọng ĐH:</strong> ${
                                 m.aspiration
                             }</p>
