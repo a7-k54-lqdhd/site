@@ -1,434 +1,587 @@
 [
     {
         "id": 1,
-        "name": "Nguyễn Văn A",
-        "hobbies": "Nghe nhạc, đá bóng",
-        "aspiration": "Đại học A",
-        "subjects": ["Toán", "Lý", "Hóa"],
-        "desiredScore": 30,
+        "name": "Nguyễn Đình An",
+        "hobbies": "Nghỉ nơi",
+        "aspiration": "Đỗ đại học",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "Anh",
+            "Lý"
+        ],
+        "desiredScore": "10",
         "photo": "images/1.jpg"
     },
     {
         "id": 2,
-        "name": "Trần Thị Bình",
-        "hobbies": "Vẽ, đi bộ",
-        "aspiration": "Đại học Mỹ thuật",
-        "subjects": ["Văn", "Sử", "Địa"],
-        "desiredScore": 24,
+        "name": "Nguyễn Trường An",
+        "hobbies": "ko phải sở đoản",
+        "aspiration": "thiên cơ bất khả lộ. Biết trước thiên mệnh thân tử đạo tiêu",
+        "subjects": "Toán văn sử",
+        "desiredScore": "Nhiều điều mong muốn",
         "photo": "images/2.jpg"
     },
     {
         "id": 3,
-        "name": "Lê Văn Cường",
-        "hobbies": "Lập trình, cờ vua",
-        "aspiration": "Đại học Quốc gia Hà Nội",
-        "subjects": ["Toán", "Anh", "Tin"],
-        "desiredScore": 29,
+        "name": "Đinh Hùng Anh",
+        "hobbies": "Gia Bảo",
+        "aspiration": "Đỗ",
+        "subjects": [
+            "english",
+            "math",
+            "literature",
+            "physjc"
+        ],
+        "desiredScore": "100",
         "photo": "images/3.jpg"
     },
     {
         "id": 4,
-        "name": "Phạm Thị Dung",
-        "hobbies": "Đọc sách, nấu ăn",
-        "aspiration": "Đại học Kinh tế",
-        "subjects": ["Văn", "Toán", "Anh"],
-        "desiredScore": 26,
+        "name": "Lê Phương Anh",
+        "hobbies": "Đi chơi",
+        "aspiration": "Một trường đủ tốt, tùy khả năng bản thân",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "Anh",
+            "Lí"
+        ],
+        "desiredScore": "28",
         "photo": "images/4.jpg"
     },
     {
         "id": 5,
-        "name": "Hoàng Minh Em",
-        "hobbies": "Chơi guitar, bơi lội",
-        "aspiration": "Học viện Âm nhạc",
-        "subjects": ["Văn", "Anh", "GDCD"],
-        "desiredScore": 25,
+        "name": "Nguyễn Mai Anh",
+        "hobbies": "Xem phim, ăn bánh mỳ, bánh gối, bánh kem, nghe nhạc đi chơi, thích lướt tiktok and ig",
+        "aspiration": "Đại học Ngoại thương",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "Lý",
+            "Anh"
+        ],
+        "desiredScore": "28",
         "photo": "images/5.jpg"
     },
     {
         "id": 6,
-        "name": "Phan Thị Giang",
-        "hobbies": "Chụp ảnh, du lịch",
-        "aspiration": "Đại học Ngoại thương",
-        "subjects": ["Toán", "Anh", "Kinh tế"],
-        "desiredScore": 27,
+        "name": "Tạ Hoàng Phương Anh",
+        "hobbies": "Ngủ, xem phim, ăn ngon, uống nước,...",
+        "aspiration": "Hữu duyên đi",
+        "subjects": [
+            "Toán",
+            "Lý",
+            "Anh",
+            "Văn"
+        ],
+        "desiredScore": "28",
         "photo": "images/6.jpg"
     },
     {
         "id": 7,
-        "name": "Vũ Văn Hòa",
-        "hobbies": "Bóng rổ, làm mô hình",
-        "aspiration": "Đại học Bách Khoa",
-        "subjects": ["Toán", "Lý", "Anh"],
-        "desiredScore": 28,
+        "name": "Trần Phương Anh",
+        "hobbies": "nghe nhạc, đi cafe",
+        "aspiration": "NEU",
+        "subjects": [
+            "Anh",
+            "Toán",
+            "Văn",
+            "Sử"
+        ],
+        "desiredScore": "28.5",
         "photo": "images/7.jpg"
     },
     {
         "id": 8,
-        "name": "Võ Thị Hương",
-        "hobbies": "Vẽ manga, đọc truyện",
-        "aspiration": "Đại học Kiến trúc",
-        "subjects": ["Văn", "Vẽ", "Anh"],
-        "desiredScore": 24,
+        "name": "Lê Văn Thế Bảo",
+        "hobbies": "Mình thích tìm hiểu cái cũ khám phá lịch sử và phá xe đạp",
+        "aspiration": "Ước đc vào học viện ngân hàng rồi đc viettel để ý",
+        "subjects": [
+            "Toán",
+            "Lý",
+            "Anh"
+        ],
+        "desiredScore": "24.9",
         "photo": "images/8.jpg"
     },
     {
         "id": 9,
-        "name": "Đặng Văn Khoa",
-        "hobbies": "Chơi game, lập trình",
-        "aspiration": "Đại học Công nghệ thông tin",
-        "subjects": ["Toán", "Tin", "Anh"],
-        "desiredScore": 30,
+        "name": "nbao",
+        "hobbies": "ỉa",
+        "aspiration": "Havard",
+        "subjects": "toan ly anh",
+        "desiredScore": "càng cao càng tốt",
         "photo": "images/9.jpg"
     },
     {
         "id": 10,
-        "name": "Bùi Thị Lan",
-        "hobbies": "Nhảy, làm bánh",
-        "aspiration": "Đại học Kinh tế Quốc dân",
-        "subjects": ["Văn", "Toán", "Anh"],
-        "desiredScore": 26,
+        "name": "Nguyễn Thái Gia Bảo",
+        "hobbies": "Hùng Anh",
+        "aspiration": "Cao đẳng Harvard",
+        "subjects": [
+            "toán",
+            "văn",
+            "anh",
+            "lý"
+        ],
+        "desiredScore": "Chưa xác định",
         "photo": "images/10.jpg"
     },
     {
         "id": 11,
-        "name": "Đỗ Văn Minh",
-        "hobbies": "Lái xe đạp, cắm trại",
-        "aspiration": "Đại học Giao thông Vận tải",
-        "subjects": ["Toán", "Lý", "Hóa"],
-        "desiredScore": 25,
+        "name": "Chu Thanh Bình",
+        "hobbies": "Khoa",
+        "aspiration": "Đỗ",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "X",
+            "Y",
+            "Z"
+        ],
+        "desiredScore": "Cao",
         "photo": "images/11.jpg"
     },
     {
         "id": 12,
-        "name": "Lương Thị Nga",
-        "hobbies": "Thiện nguyện, đọc sách",
-        "aspiration": "Đại học Sư phạm",
-        "subjects": ["Văn", "Sử", "Địa"],
-        "desiredScore": 23,
+        "name": "Lê Tuấn Cảnh",
+        "hobbies": "Toán, Lý, Anh",
+        "aspiration": "VNU, HUST, T01",
+        "subjects": ["Toán", "Lý", "Anh"],
+        "desiredScore": "27+",
         "photo": "images/12.jpg"
     },
     {
         "id": 13,
-        "name": "Nguyễn Văn Oanh",
-        "hobbies": "Chơi đàn, viết nhạc",
-        "aspiration": "Học viện Âm nhạc",
-        "subjects": ["Văn", "Âm nhạc", "Anh"],
-        "desiredScore": 24,
-        "photo": "images/13.jpg"
+        "name": "NONE",
+        "hobbies": "NONE",
+        "aspiration": "NONE",
+        "subjects": [],
+        "desiredScore": "NONE",
+        "photo": ""
     },
     {
         "id": 14,
-        "name": "Trần Minh Phúc",
-        "hobbies": "Chess, đọc sách khoa học",
-        "aspiration": "Đại học Quốc gia TP.HCM",
-        "subjects": ["Toán", "Lý", "Anh"],
-        "desiredScore": 29,
+        "name": "Đoàn Văn Cường",
+        "hobbies": "Gì cũng thích trừ nhg thứ k thích",
+        "aspiration": "Hút",
+        "subjects": [
+            "Toán",
+            "văn",
+            "anh",
+            "lý"
+        ],
+        "desiredScore": "2",
         "photo": "images/14.jpg"
     },
     {
         "id": 15,
-        "name": "Lê Thị Quỳnh",
-        "hobbies": "Vẽ tranh, may vá",
-        "aspiration": "Đại học Mỹ thuật",
-        "subjects": ["Vẽ", "Văn", "Anh"],
-        "desiredScore": 24,
+        "name": "Nguyễn Thế Dương",
+        "hobbies": "Bình, Khoa, Khánh, Hiếu, Bảo, Khôi",
+        "aspiration": "Đại học Thanh Hóa",
+        "subjects": [
+            "Toán",
+            "Vật lý",
+            "Tiếng Anh"
+        ],
+        "desiredScore": "28.01",
         "photo": "images/15.jpg"
     },
     {
         "id": 16,
-        "name": "Phạm Văn Quốc",
-        "hobbies": "Bơi, đọc sách lịch sử",
-        "aspiration": "Đại học Khoa học Xã hội và Nhân văn",
-        "subjects": ["Văn", "Sử", "Địa"],
-        "desiredScore": 25,
-        "photo": "images/16.jpg"
+        "name": "NONE",
+        "hobbies": "NONE",
+        "aspiration": "NONE",
+        "subjects": [],
+        "desiredScore": "NONE",
+        "photo": ""
     },
     {
         "id": 17,
-        "name": "Hoàng Thị Rạng",
-        "hobbies": "Tập yoga, làm vườn",
-        "aspiration": "Đại học Nông Lâm",
-        "subjects": ["Sinh", "Hóa", "Toán"],
-        "desiredScore": 23,
+        "name": "Bùi Khắc Hiếu",
+        "hobbies": "nem chua",
+        "aspiration": "Stanford",
+        "subjects": "ko phải hoá là được",
+        "desiredScore": "1",
         "photo": "images/17.jpg"
     },
     {
         "id": 18,
-        "name": "Phan Văn Sơn",
-        "hobbies": "Leo núi, nhiếp ảnh",
-        "aspiration": "Đại học Thương mại",
-        "subjects": ["Toán", "Anh", "Kinh tế"],
-        "desiredScore": 26,
-        "photo": "images/18.jpg"
+        "name": "NONE",
+        "hobbies": "NONE",
+        "aspiration": "NONE",
+        "subjects": [],
+        "desiredScore": "NONE",
+        "photo": ""
     },
     {
         "id": 19,
-        "name": "Vũ Thị Trang",
-        "hobbies": "Trang điểm, làm video",
-        "aspiration": "Đại học Văn hóa",
-        "subjects": ["Văn", "Anh", "GDCD"],
-        "desiredScore": 24,
+        "name": "Đỗ Gia Huy",
+        "hobbies": "ĂN, NGỦ, CHƠI GAME, NHÌN LÊN TRỜI, ĐI DẠO, NHẢY, THỔI SÁO, NẤU ĂN, VIẾT THƯ",
+        "aspiration": "Sư phạm Anh - ĐHNN - ĐHQGHN",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "Anh"
+        ],
+        "desiredScore": "9.5",
         "photo": "images/19.jpg"
     },
     {
         "id": 20,
-        "name": "Võ Văn Tuấn",
-        "hobbies": "Đá bóng, mô phỏng 3D",
-        "aspiration": "Đại học Bách Khoa",
-        "subjects": ["Toán", "Lý", "Tin"],
-        "desiredScore": 28,
+        "name": "Nguyễn Thị Thu Hương",
+        "hobbies": "thích nhiều tiền, thích ăn ngon, uống ngon, thích đi chơi với bạn bè, người thân, anh chị em, đặc biệt là thích những thứ mình thích",
+        "aspiration": "trường nào cao điểm nhất",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "Anh",
+            "Sử"
+        ],
+        "desiredScore": "30",
         "photo": "images/20.jpg"
     },
     {
         "id": 21,
-        "name": "Đặng Thị Uyên",
-        "hobbies": "Đọc sách, nhảy hiện đại",
-        "aspiration": "Đại học Sư phạm Nghệ thuật",
-        "subjects": ["Văn", "Âm nhạc", "GDCD"],
-        "desiredScore": 23,
+        "name": "Trần Bá Hựu",
+        "hobbies": "nghe nhạc",
+        "aspiration": "NEU",
+        "subjects": [
+            "Lý",
+            "Tiếng Anh"
+        ],
+        "desiredScore": "26",
         "photo": "images/21.jpg"
     },
     {
         "id": 22,
-        "name": "Bùi Văn Vinh",
-        "hobbies": "Lập trình web, đá cầu",
-        "aspiration": "Đại học Công nghệ thông tin",
-        "subjects": ["Toán", "Tin", "Anh"],
-        "desiredScore": 29,
+        "name": "Nguyễn Duy Khánh",
+        "hobbies": "Make up",
+        "aspiration": "Trường đại học Kinh tế quốc dân (cho nữ sinh)",
+        "subjects": [
+            "Toán",
+            "văn",
+            "anh"
+        ],
+        "desiredScore": "29",
         "photo": "images/22.jpg"
     },
     {
         "id": 23,
-        "name": "Đỗ Thị Xuân",
-        "hobbies": "Cắm hoa, làm gốm",
-        "aspiration": "Đại học Kiến trúc",
-        "subjects": ["Vẽ", "Văn", "Anh"],
-        "desiredScore": 24,
+        "name": "Bùi Anh Khoa",
+        "hobbies": "Bình",
+        "aspiration": "roblox",
+        "subjects": [
+            "toán",
+            "lý",
+            "anh"
+        ],
+        "desiredScore": "はたあさかなたまやなあは",
         "photo": "images/23.jpg"
     },
     {
         "id": 24,
-        "name": "Lê Văn Yên",
-        "hobbies": "Sưu tập đồ cổ, cờ tướng",
-        "aspiration": "Đại học Khoa học Tự nhiên",
-        "subjects": ["Toán", "Hóa", "Sinh"],
-        "desiredScore": 26,
+        "name": "Nguyễn Lân Khôi",
+        "hobbies": "Hát, viết nhạc, tiếng anh, nghe nhạc, bóng rổ",
+        "aspiration": "Ftu neu (thật ra là mỗi ftu)",
+        "subjects": [
+            "Toán",
+            "văn",
+            "anh",
+            "sử"
+        ],
+        "desiredScore": "7",
         "photo": "images/24.jpg"
     },
     {
         "id": 25,
-        "name": "Nguyễn Thị Ánh",
-        "hobbies": "Ca hát, làm bánh",
-        "aspiration": "Học viện Âm nhạc",
-        "subjects": ["Văn", "Âm nhạc", "Anh"],
-        "desiredScore": 25,
+        "name": "Tạ Chí Kiên",
+        "hobbies": "Nghe nhạc",
+        "aspiration": "Chưa biết",
+        "subjects": "Toán Văn Anh",
+        "desiredScore": "30",
         "photo": "images/25.jpg"
     },
     {
         "id": 26,
-        "name": "Trần Văn Bình",
-        "hobbies": "Đua xe đạp, coding",
-        "aspiration": "Đại học Bách Khoa",
-        "subjects": ["Toán", "Lý", "Tin"],
-        "desiredScore": 28,
+        "name": "Nguyễn Khánh Linh",
+        "hobbies": "Ngủ, bài tiết chất cặn từ hệ tiêu hoá",
+        "aspiration": "DHQG-Đại học Khoa học tự nhiên",
+        "subjects": "Toán-Văn-Sinh-Anh",
+        "desiredScore": "31",
         "photo": "images/26.jpg"
     },
     {
         "id": 27,
-        "name": "Phạm Thị Chi",
-        "hobbies": "Du lịch, vẽ tranh",
-        "aspiration": "Đại học Ngoại thương",
-        "subjects": ["Văn", "Anh", "Kinh tế"],
-        "desiredScore": 27,
+        "name": "Nguyễn Thùy Linh",
+        "hobbies": "Chơi Liên Quân với bạn, xem phim, ngủ và ăn ngon",
+        "aspiration": "Đại học sư phạm I Hà Nội - Ngành sư phạm toán ( dạy bằng tiếng anh )",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "Anh",
+            "Tin"
+        ],
+        "desiredScore": "28.5",
         "photo": "images/27.jpg"
     },
     {
         "id": 28,
-        "name": "Hoàng Văn Duy",
-        "hobbies": "Guitar, làm mô hình",
-        "aspiration": "Đại học Công nghệ Thông tin",
-        "subjects": ["Toán", "Tin", "Anh"],
-        "desiredScore": 29,
+        "name": "Bùi Tuyết Mai",
+        "hobbies": "nằm 1 chỗ không làm gì cả",
+        "aspiration": "chưa biết",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "Anh",
+            "Sử"
+        ],
+        "desiredScore": "thủ khoa toàn cầu",
         "photo": "images/28.jpg"
     },
     {
         "id": 29,
-        "name": "Phan Thị Emma",
-        "hobbies": "Thiện nguyện, đọc sách",
-        "aspiration": "Đại học Y Hà Nội",
-        "subjects": ["Sinh", "Hóa", "Toán"],
-        "desiredScore": 28,
+        "name": "Nguyễn Như Mai",
+        "hobbies": "Ngủ, ăn, múa may quay cuồng, chơi với chó.",
+        "aspiration": "Đại học Luật Hà Nội - ngành Luật",
+        "subjects": [
+            "Toán",
+            "Lý",
+            "Anh"
+        ],
+        "desiredScore": "30",
         "photo": "images/29.jpg"
     },
     {
         "id": 30,
-        "name": "Vũ Minh Giáp",
-        "hobbies": "Bóng chuyền, chess",
-        "aspiration": "Đại học Thể dục Thể thao",
-        "subjects": ["Sinh", "GDQP", "Toán"],
-        "desiredScore": 24,
+        "name": "Lê Tú Minh",
+        "hobbies": "Đọc truyện, mua goods, ngủ, chơi game, kiếm tiền",
+        "aspiration": "logistic",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "Anh",
+            "Lý"
+        ],
+        "desiredScore": "26",
         "photo": "images/30.jpg"
     },
     {
         "id": 31,
-        "name": "Võ Thị Hà",
-        "hobbies": "May vá, nấu ăn",
-        "aspiration": "Đại học Sư phạm",
-        "subjects": ["Văn", "Sử", "GDCD"],
-        "desiredScore": 23,
-        "photo": "images/31.jpg"
+        "name": "Nguyễn Phạm Quang Minh",
+        "hobbies": "NONE",
+        "aspiration": "NONE",
+        "subjects": [],
+        "desiredScore": "NONE",
+        "photo": ""
     },
     {
         "id": 32,
-        "name": "Đặng Văn Hùng",
-        "hobbies": "Lập trình game, vẽ",
-        "aspiration": "Đại học Mỹ thuật Công nghiệp",
-        "subjects": ["Tin", "Vẽ", "Toán"],
-        "desiredScore": 27,
-        "photo": "images/32.jpg"
+        "name": "NONE",
+        "hobbies": "NONE",
+        "aspiration": "NONE",
+        "subjects": [],
+        "desiredScore": "NONE",
+        "photo": ""
     },
     {
         "id": 33,
-        "name": "Bùi Thị Hương",
-        "hobbies": "Khiêu vũ, viết lách",
-        "aspiration": "Đại học Văn hóa",
-        "subjects": ["Văn", "Anh", "GDCD"],
-        "desiredScore": 24,
+        "name": "Nguyễn Tuệ Minh",
+        "hobbies": "ngắm cảnh, đi lượn, ăn vặt, thích hoa",
+        "aspiration": "ngoại thương ngành luật , neu, đại học luật",
+        "subjects": "toán văn anh sử",
+        "desiredScore": "26.75",
         "photo": "images/33.jpg"
     },
     {
         "id": 34,
-        "name": "Đỗ Văn Khang",
-        "hobbies": "Cờ vua, đọc sách kỹ thuật",
-        "aspiration": "Đại học Bách Khoa",
-        "subjects": ["Toán", "Lý", "Tin"],
-        "desiredScore": 30,
+        "name": "Vũ Trà My",
+        "hobbies": "a7",
+        "aspiration": "NEU",
+        "subjects": [
+            "toán",
+            "văn",
+            "anh",
+            "sử"
+        ],
+        "desiredScore": "27",
         "photo": "images/34.jpg"
     },
     {
         "id": 35,
-        "name": "Lương Thị Linh",
-        "hobbies": "Thiết kế thời trang, vẽ",
-        "aspiration": "Đại học Mỹ thuật",
-        "subjects": ["Vẽ", "Văn", "Anh"],
-        "desiredScore": 25,
+        "name": "Nguyễn Trần Hoàng Nam",
+        "hobbies": "ngủ",
+        "aspiration": "ptit",
+        "subjects": [
+            "toán",
+            "văn",
+            "anh",
+            "sử"
+        ],
+        "desiredScore": "30",
         "photo": "images/35.jpg"
     },
     {
         "id": 36,
-        "name": "Nguyễn Văn Mạnh",
-        "hobbies": "Leo núi, nhiếp ảnh",
-        "aspiration": "Đại học Nông Lâm",
-        "subjects": ["Sinh", "Hóa", "Toán"],
-        "desiredScore": 24,
-        "photo": "images/36.jpg"
+        "name": "NONE",
+        "hobbies": "NONE",
+        "aspiration": "NONE",
+        "subjects": [],
+        "desiredScore": "NONE",
+        "photo": ""
     },
     {
         "id": 37,
-        "name": "Trần Thị Ngọc",
-        "hobbies": "Làm bánh, livestream",
-        "aspiration": "Đại học Kinh tế TP.HCM",
-        "subjects": ["Văn", "Anh", "Kinh tế"],
-        "desiredScore": 26,
+        "name": "Nguyễn Như Ngọc",
+        "hobbies": "dùng điện thoại",
+        "aspiration": "chưa xác định",
+        "subjects": [
+            "toán",
+            "lí",
+            "anh"
+        ],
+        "desiredScore": "chưa xác định",
         "photo": "images/37.jpg"
     },
     {
         "id": 38,
-        "name": "Lê Văn Phát",
-        "hobbies": "Chơi piano, đọc sách",
-        "aspiration": "Học viện Âm nhạc",
-        "subjects": ["Văn", "Âm nhạc", "Anh"],
-        "desiredScore": 25,
+        "name": "Vũ Thảo Nguyên",
+        "hobbies": "ngủ là chính",
+        "aspiration": "Neu, Ptit",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "Anh",
+            "Sử"
+        ],
+        "desiredScore": "26.5",
         "photo": "images/38.jpg"
     },
     {
         "id": 39,
-        "name": "Phạm Thị Quế",
-        "hobbies": "Mỹ thuật, làm đồ thủ công",
-        "aspiration": "Đại học Kiến trúc",
-        "subjects": ["Vẽ", "Văn", "Anh"],
-        "desiredScore": 24,
+        "name": "NGUYỄN THỊ HOÀI PHƯƠNG",
+        "hobbies": "10₫ toán",
+        "aspiration": "ftu",
+        "subjects": [
+            "sử",
+            "tiếng trung"
+        ],
+        "desiredScore": "29",
         "photo": "images/39.jpg"
     },
     {
         "id": 40,
-        "name": "Hoàng Văn Sang",
-        "hobbies": "Thể thao, lập trình",
-        "aspiration": "Đại học Bách Khoa",
-        "subjects": ["Toán", "Lý", "Tin"],
-        "desiredScore": 29,
+        "name": "Trần Thị Phượng",
+        "hobbies": "-",
+        "aspiration": "Đại học Quốc gia Hà Nội",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "Anh",
+            "Lí"
+        ],
+        "desiredScore": "-",
         "photo": "images/40.jpg"
     },
     {
         "id": 41,
-        "name": "Phan Thị Tâm",
-        "hobbies": "Chạy bộ, đọc sách",
-        "aspiration": "Đại học Y Dược TP.HCM",
-        "subjects": ["Sinh", "Hóa", "Toán"],
-        "desiredScore": 29,
+        "name": "Bùi Thu Thảo",
+        "hobbies": "Đọc sách, xem phim action, tình cảm đẫm lệ hàn quốc, những thứ cute như bản thân, soi gương, học toán, nghe nhạc thất tình, hồng hài nhi, ngắm gái đẹp gần bằng bản thân vì đang là gái đẹp số 1 thế giới",
+        "aspiration": "Đại học Quốc Gia Hà Nội",
+        "subjects": [
+            "Toán",
+            "văn",
+            "anh",
+            "sinh"
+        ],
+        "desiredScore": "28",
         "photo": "images/41.jpg"
     },
     {
         "id": 42,
-        "name": "Vũ Văn Toàn",
-        "hobbies": "Phong trào sinh viên, tình nguyện",
-        "aspiration": "Đại học Quốc gia Hà Nội",
-        "subjects": ["Toán", "Văn", "Anh"],
-        "desiredScore": 27,
-        "photo": "images/42.jpg"
+        "name": "NONE",
+        "hobbies": "NONE",
+        "aspiration": "NONE",
+        "subjects": [],
+        "desiredScore": "NONE",
+        "photo": ""
     },
     {
         "id": 43,
-        "name": "Võ Thị Uyên",
-        "hobbies": "Vẽ, blogging",
-        "aspiration": "Đại học Mỹ thuật",
-        "subjects": ["Vẽ", "Văn", "Anh"],
-        "desiredScore": 24,
+        "name": "Đàm Nguyễn Phương Thư",
+        "hobbies": "Ngủ",
+        "aspiration": "Ngủ",
+        "subjects": "Ngủ",
+        "desiredScore": "100",
         "photo": "images/43.jpg"
     },
     {
         "id": 44,
-        "name": "Đặng Văn Vũ",
-        "hobbies": "Chạy địa hình, chess",
-        "aspiration": "Đại học Thể dục Thể thao",
-        "subjects": ["Toán", "Sinh", "GDQP"],
-        "desiredScore": 24,
+        "name": "Phùng Anh Thư",
+        "hobbies": "nhiếp ảnh",
+        "aspiration": "luật",
+        "subjects": [
+            "toán",
+            "văn",
+            "anh",
+            "sử"
+        ],
+        "desiredScore": "10",
         "photo": "images/44.jpg"
     },
     {
         "id": 45,
-        "name": "Bùi Thị Xuyến",
-        "hobbies": "Làm vườn, đọc sách",
-        "aspiration": "Đại học Sư phạm",
-        "subjects": ["Văn", "Sử", "Địa"],
-        "desiredScore": 23,
+        "name": "Đăng Thị Huyền Trang",
+        "hobbies": "Ngủ, đọc truyện",
+        "aspiration": "Huce, Hust, Neu, Ajc, Hlu, Aof, Ptit, Hau, Dav, Tmu, Hnue, Hmu, Rmit",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "Anh",
+            "Lí"
+        ],
+        "desiredScore": "10.10",
         "photo": "images/45.jpg"
     },
     {
         "id": 46,
-        "name": "Đỗ Văn Yến",
-        "hobbies": "Lái xe, sửa đồ",
-        "aspiration": "Đại học Giao thông Vận tải",
-        "subjects": ["Toán", "Lý", "Hóa"],
-        "desiredScore": 25,
+        "name": "Lê Minh Tú",
+        "hobbies": "ngủ",
+        "aspiration": "Đại học Mĩ Thuật Công nghiệp",
+        "subjects": [
+            "Toán",
+            "Văn",
+            "Anh"
+        ],
+        "desiredScore": "24",
         "photo": "images/46.jpg"
     },
     {
         "id": 47,
-        "name": "Lê Thị Zoa",
-        "hobbies": "Thiết kế, nhiếp ảnh",
-        "aspiration": "Đại học Ngoại thương",
-        "subjects": ["Văn", "Anh", "Kinh tế"],
-        "desiredScore": 27,
+        "name": "Dương Hà Vi",
+        "hobbies": "đi concert, móc len",
+        "aspiration": "ULIS",
+        "subjects": [
+            "Toán",
+            "Lý",
+            "Anh"
+        ],
+        "desiredScore": "10",
         "photo": "images/47.jpg"
     },
     {
         "id": 48,
-        "name": "Nguyễn Văn Bình",
-        "hobbies": "Công nghệ, đọc sách",
-        "aspiration": "Đại học Công nghệ thông tin",
-        "subjects": ["Toán", "Tin", "Anh"],
-        "desiredScore": 30,
+        "name": "Hoàng Lê Như Ý",
+        "hobbies": "mình thích nhăm nhăm rồi ngủ ngon",
+        "aspiration": "mình còn đang phân vân ạa",
+        "subjects": [
+            "toán",
+            "lí",
+            "văn",
+            "anh"
+        ],
+        "desiredScore": "10",
         "photo": "images/48.jpg"
     }
 ]
