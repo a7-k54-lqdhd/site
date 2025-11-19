@@ -154,7 +154,7 @@
     },
     {
         "id": 13,
-        "name": "NONE",
+        "name": "Dương Hà Chi",
         "hobbies": "NONE",
         "aspiration": "NONE",
         "subjects": [],
@@ -190,7 +190,7 @@
     },
     {
         "id": 16,
-        "name": "NONE",
+        "name": "Nguyễn Xuân Minh Hiển",
         "hobbies": "NONE",
         "aspiration": "NONE",
         "subjects": [],
@@ -208,7 +208,7 @@
     },
     {
         "id": 18,
-        "name": "NONE",
+        "name": "Bùi Sĩ Hoàn",
         "hobbies": "NONE",
         "aspiration": "NONE",
         "subjects": [],
@@ -378,7 +378,7 @@
     },
     {
         "id": 32,
-        "name": "NONE",
+        "name": "Nguyễn Tiến Bình Minh",
         "hobbies": "NONE",
         "aspiration": "NONE",
         "subjects": [],
@@ -424,12 +424,12 @@
     },
     {
         "id": 36,
-        "name": "NONE",
+        "name": "Nguyễn Như Ngọc",
         "hobbies": "NONE",
         "aspiration": "NONE",
         "subjects": [],
         "desiredScore": "NONE",
-        "photo": ""
+        "photo": "images/36.jpg"
     },
     {
         "id": 37,
@@ -500,7 +500,7 @@
     },
     {
         "id": 42,
-        "name": "NONE",
+        "name": "Lê Hương Thảo",
         "hobbies": "NONE",
         "aspiration": "NONE",
         "subjects": [],
