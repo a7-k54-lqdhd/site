@@ -115,6 +115,14 @@
             .search-input::placeholder {
                 color: #94a3b8;
             }
+            .indicator {
+                color: white;
+                font-size: 1rem;
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+                font-weight: 600;
+                margin-top: 12px;
+                letter-spacing: 0.5px;
+            }
             .carousel-container {
                 position: relative;
                 width: 100%;
@@ -387,16 +395,6 @@
             }
             .btn:active {
                 transform: scale(0.95);
-            }
-            .indicator {
-                position: absolute;
-                bottom: -60px;
-                left: 50%;
-                transform: translateX(-50%);
-                color: white;
-                font-size: 1rem;
-                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-                font-weight: 500;
             }
             @media (max-width: 768px) {
                 .carousel-container {
@@ -681,6 +679,7 @@
                     autocomplete="off"
                 />
             </div>
+            <div class="indicator" id="indicator">1 / 48</div>
         </div>
 
         <div class="carousel-container">
@@ -691,7 +690,6 @@
                 <button class="btn" id="prevBtn" aria-label="Trước">‹</button>
                 <button class="btn" id="nextBtn" aria-label="Sau">›</button>
             </div>
-            <div class="indicator" id="indicator">1 / 48</div>
         </div>
 
         <!-- Modal for detailed member view -->
