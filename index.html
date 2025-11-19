@@ -955,7 +955,7 @@
                             card.style.pointerEvents = "auto";
                             card.onclick = () => showModal(filteredMembers[i]);
 
-                            // Load image for active card and adjacent cards
+                            // Load image for active card
                             const img = card.querySelector("img");
                             if (img && img.dataset.src && !img.src) {
                                 img.src = img.dataset.src;
@@ -993,9 +993,21 @@
                         } else if (diff === 2) {
                             card.classList.add("far-right");
                             card.style.pointerEvents = "none";
+                            
+                            // Preload far-right card image
+                            const img = card.querySelector("img");
+                            if (img && img.dataset.src && !img.src) {
+                                img.src = img.dataset.src;
+                            }
                         } else if (diff === filteredMembers.length - 2) {
                             card.classList.add("far-left");
                             card.style.pointerEvents = "none";
+                            
+                            // Preload far-left card image
+                            const img = card.querySelector("img");
+                            if (img && img.dataset.src && !img.src) {
+                                img.src = img.dataset.src;
+                            }
                         } else {
                             card.style.pointerEvents = "none";
                         }
