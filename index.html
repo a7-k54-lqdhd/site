@@ -308,6 +308,20 @@
                 background: linear-gradient(135deg, #667eea, #764ba2);
                 box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
                 transition: all 0.3s;
+                overflow: hidden;
+                position: relative;
+            }
+            .avatar img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .avatar-fallback {
+                position: relative;
+                z-index: 1;
             }
             .card.active .avatar {
                 cursor: pointer;
@@ -514,6 +528,20 @@
                 box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
                 cursor: pointer;
                 transition: all 0.3s;
+                overflow: hidden;
+                position: relative;
+            }
+            .modal-avatar img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .modal-avatar-fallback {
+                position: relative;
+                z-index: 1;
             }
             .modal-avatar:hover {
                 transform: scale(1.08);
@@ -721,13 +749,19 @@
 
                 // Modal functions
                 function showModal(member) {
-                    modalAvatar.textContent = member.id;
+                    const photoPath = member.photo || `images/${member.id}.jpg`;
+                    
+                    // Update modal avatar with image
+                    modalAvatar.innerHTML = `
+                        <img src="${photoPath}" alt="${member.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <span class="modal-avatar-fallback" style="display: none;">${member.id}</span>
+                    `;
+                    
                     modalName.textContent = member.name;
                     modalId.textContent = `#${member.id}`;
 
                     // Store photo path for avatar click
-                    modalAvatar.dataset.photo =
-                        member.photo || `images/${member.id}.jpg`;
+                    modalAvatar.dataset.photo = photoPath;
 
                     modalBody.innerHTML = `
                         <div class="modal-field">
@@ -854,7 +888,10 @@
                         card.innerHTML = `
                         <div class="avatar" data-photo="${
                             m.photo || `images/${m.id}.jpg`
-                        }">${m.id}</div>
+                        }">
+                            <img src="${m.photo || `images/${m.id}.jpg`}" alt="${m.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                            <span class="avatar-fallback" style="display: none;">${m.id}</span>
+                        </div>
                         <div class="details">
                             <h2>${m.name}</h2>
                             <p><strong>Sở thích:</strong> ${m.hobbies}</p>
