@@ -314,7 +314,7 @@
             .avatar img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: contain;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -534,7 +534,7 @@
             .modal-avatar img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: contain;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -603,14 +603,19 @@
                 opacity: 1;
             }
             .image-modal-content {
-                max-width: 90%;
-                max-height: 90vh;
+                max-width: 95vw;
+                max-height: 95vh;
+                min-width: min(600px, 90vw);
+                min-height: min(400px, 60vh);
                 transform: scale(0.3) rotate(5deg);
                 opacity: 0;
                 transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
                 border-radius: 20px;
                 overflow: hidden;
                 box-shadow: 0 30px 90px rgba(0, 0, 0, 0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             .image-modal-overlay.show .image-modal-content {
                 transform: scale(1) rotate(0deg);
@@ -618,8 +623,11 @@
             }
             .image-modal-content img {
                 display: block;
-                width: 100%;
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
                 height: auto;
+                object-fit: contain;
             }
             .image-modal-close {
                 position: absolute;
