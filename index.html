@@ -3,15 +3,25 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>12A7</title>
-    <!-- page/favicon logo -->
-    <link rel="icon" href="https://media.cake.me/image/upload/s--tVRb29qs--/c_pad,fl_png8,h_315,w_600/v1697635434/p9njrrotovr3opf3auz8.png" type="image/png">
+        <title>12A7</title>
         <style>
             :root {
                 --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                 --card: #fff;
                 --accent: #5b8def;
                 --muted: #6b7280;
+                --modal-bg: #ffffff;
+                --modal-text: #0f172a;
+                --close-btn: #475569;
+            }
+            body.dark-mode {
+                --bg: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+                --card: #334155;
+                --accent: #60a5fa;
+                --muted: #94a3b8;
+                --modal-bg: #1e293b;
+                --modal-text: #f1f5f9;
+                --close-btn: #cbd5e1;
             }
             * {
                 box-sizing: border-box;
@@ -19,8 +29,8 @@
                 padding: 0;
             }
             body {
-                font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-                    "Segoe UI", Roboto, "Helvetica Neue", Arial;
+                font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+                    Roboto, "Helvetica Neue", Arial, sans-serif;
                 background: var(--bg);
                 color: #0f172a;
                 min-height: 100vh;
@@ -35,28 +45,49 @@
                 text-align: center;
                 margin-bottom: 30px;
                 color: white;
+                position: relative;
             }
-            .site-title {
-                display: inline-flex;
-                align-items: center;
-                gap: 12px;
-                font-size: 1.6rem;
+            .dark-mode-toggle {
+                position: fixed;
+                top: 30px;
+                right: 30px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border: 3px solid rgba(255, 255, 255, 0.8);
+                border-radius: 60px;
+                padding: 14px 28px;
+                cursor: pointer;
+                color: white;
+                font-size: 1.1rem;
                 font-weight: 700;
+                backdrop-filter: blur(10px);
+                transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3),
+                    0 0 20px rgba(102, 126, 234, 0.4);
+                z-index: 2000;
+                text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            }
+            .dark-mode-toggle:hover {
+                background: linear-gradient(135deg, #764ba2 0%, #f093fb 100%);
+                transform: scale(1.12) rotate(-3deg);
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4),
+                    0 0 30px rgba(240, 147, 251, 0.6);
+            }
+            body.dark-mode .dark-mode-toggle {
+                background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+                border-color: rgba(251, 191, 36, 0.8);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3),
+                    0 0 20px rgba(251, 191, 36, 0.5);
+            }
+            body.dark-mode .dark-mode-toggle:hover {
+                background: linear-gradient(135deg, #fcd34d 0%, #fbbf24 100%);
+                transform: scale(1.12) rotate(3deg);
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4),
+                    0 0 30px rgba(252, 211, 77, 0.7);
+            }
+            .header h1 {
+                font-size: 2rem;
                 margin-bottom: 8px;
                 text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            }
-            .site-logo {
-                width: 56px;
-                height: 28px;
-                object-fit: contain;
-                border-radius: 6px;
-                box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-                background: rgba(255,255,255,0.06);
-            }
-            .header p {
-                font-size: 0.95rem;
-                opacity: 0.9;
-                margin-bottom: 16px;
             }
             .header p {
                 font-size: 0.95rem;
@@ -139,6 +170,19 @@
                 animation: cardGlow 3s ease-in-out infinite;
                 transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1),
                     box-shadow 0.45s;
+                cursor: pointer;
+            }
+
+            /* Click effect on active card */
+            .card.active:active {
+                transform: translate(-50%, -50%) scale(1.15);
+                box-shadow: 0 0 0 3px rgba(255, 255, 255, 1),
+                    0 0 50px rgba(240, 147, 251, 1),
+                    0 25px 70px rgba(0, 0, 0, 0.5),
+                    0 10px 40px rgba(118, 75, 162, 0.8),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+                transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1),
+                    box-shadow 0.15s;
             }
 
             /* gentle up/down float while hovering the active card */
@@ -263,6 +307,17 @@
                 color: white;
                 background: linear-gradient(135deg, #667eea, #764ba2);
                 box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+                transition: all 0.3s;
+            }
+            .card.active .avatar {
+                cursor: pointer;
+            }
+            .card.active .avatar:hover {
+                transform: scale(1.08);
+                box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
+            }
+            .card.active .avatar:active {
+                transform: scale(0.98);
             }
             .details {
                 flex: 1;
@@ -368,10 +423,208 @@
                     font-size: 1.2rem;
                 }
             }
+
+            /* Modal for detailed view */
+            .modal-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                backdrop-filter: blur(8px);
+                z-index: 1000;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+            .modal-overlay.show {
+                display: flex;
+                opacity: 1;
+            }
+            .modal-content {
+                background: var(--modal-bg);
+                color: var(--modal-text);
+                border-radius: 24px;
+                padding: 40px;
+                max-width: 600px;
+                width: 90%;
+                max-height: 80vh;
+                overflow-y: auto;
+                box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
+                position: relative;
+                transform: scale(0.5) translateY(-50px);
+                opacity: 0;
+                transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            }
+            .modal-overlay.show .modal-content {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+            /* Hide scrollbar in modal */
+            .modal-content {
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* IE/Edge */
+            }
+            .modal-content::-webkit-scrollbar {
+                display: none; /* Chrome/Safari/Opera */
+            }
+            .modal-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: rgba(100, 100, 100, 0.2);
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--close-btn);
+                transition: all 0.3s;
+            }
+            .modal-close:hover {
+                background: rgba(100, 100, 100, 0.4);
+                transform: rotate(90deg);
+            }
+            .modal-header {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+                border-bottom: 2px solid rgba(100, 100, 100, 0.2);
+            }
+            .modal-avatar {
+                width: 120px;
+                height: 120px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 3rem;
+                font-weight: 700;
+                color: white;
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .modal-avatar:hover {
+                transform: scale(1.08);
+                box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+            }
+            .modal-avatar:active {
+                transform: scale(0.98);
+            }
+            .modal-title h2 {
+                font-size: 2rem;
+                margin-bottom: 8px;
+            }
+            .modal-title p {
+                color: var(--muted);
+                font-size: 1rem;
+            }
+            .modal-body {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+            .modal-field {
+                padding: 16px;
+                background: rgba(100, 100, 100, 0.1);
+                border-radius: 12px;
+                border-left: 4px solid var(--accent);
+            }
+            .modal-field strong {
+                color: var(--accent);
+                display: block;
+                margin-bottom: 6px;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            .modal-field p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+            }
+
+            /* Image fullscreen modal */
+            .image-modal-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                backdrop-filter: blur(10px);
+                z-index: 3000;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+            .image-modal-overlay.show {
+                display: flex;
+                opacity: 1;
+            }
+            .image-modal-content {
+                max-width: 90%;
+                max-height: 90vh;
+                transform: scale(0.3) rotate(5deg);
+                opacity: 0;
+                transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 30px 90px rgba(0, 0, 0, 0.8);
+            }
+            .image-modal-overlay.show .image-modal-content {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+            .image-modal-content img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .image-modal-close {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(10px);
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.8rem;
+                font-weight: 300;
+                transition: all 0.3s;
+                z-index: 3001;
+            }
+            .image-modal-close:hover {
+                background: rgba(255, 255, 255, 0.25);
+                transform: rotate(90deg) scale(1.1);
+            }
         </style>
     </head>
     <body>
         <div class="header">
+            <button class="dark-mode-toggle" id="darkModeToggle">
+                🌙 Dark Mode
+            </button>
+
             <h1>12A7</h1>
             <p>Dùng mũi tên ← → hoặc nút điều khiển để xem từng thành viên</p>
             <div class="search-container">
@@ -396,6 +649,31 @@
             <div class="indicator" id="indicator">1 / 48</div>
         </div>
 
+        <!-- Modal for detailed member view -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">✕</button>
+                <div class="modal-header">
+                    <div class="modal-avatar" id="modalAvatar">1</div>
+                    <div class="modal-title">
+                        <h2 id="modalName">Tên thành viên</h2>
+                        <p id="modalId">#1</p>
+                    </div>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Detailed info will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Image fullscreen modal -->
+        <div class="image-modal-overlay" id="imageModalOverlay">
+            <button class="image-modal-close" id="imageModalClose">✕</button>
+            <div class="image-modal-content" id="imageModalContent">
+                <img id="imageModalImg" src="" alt="Member Photo" />
+            </div>
+        </div>
+
         <script>
             (async function () {
                 // Try to load members from members.json; fallback to a generated list if fetch fails
@@ -404,10 +682,133 @@
                 const searchInput = document.getElementById("searchInput");
                 const nextBtn = document.getElementById("nextBtn");
                 const prevBtn = document.getElementById("prevBtn");
+                const darkModeToggle =
+                    document.getElementById("darkModeToggle");
+                const modalOverlay = document.getElementById("modalOverlay");
+                const modalClose = document.getElementById("modalClose");
+                const modalAvatar = document.getElementById("modalAvatar");
+                const modalName = document.getElementById("modalName");
+                const modalId = document.getElementById("modalId");
+                const modalBody = document.getElementById("modalBody");
+                const imageModalOverlay =
+                    document.getElementById("imageModalOverlay");
+                const imageModalClose =
+                    document.getElementById("imageModalClose");
+                const imageModalImg = document.getElementById("imageModalImg");
 
                 let members = [];
                 let filteredMembers = [];
                 let currentIndex = 0;
+
+                // Dark mode toggle
+                function initDarkMode() {
+                    const isDark = localStorage.getItem("darkMode") === "true";
+                    if (isDark) {
+                        document.body.classList.add("dark-mode");
+                        darkModeToggle.textContent = "☀️ Light Mode";
+                    }
+                }
+
+                darkModeToggle.addEventListener("click", () => {
+                    document.body.classList.toggle("dark-mode");
+                    const isDark =
+                        document.body.classList.contains("dark-mode");
+                    localStorage.setItem("darkMode", isDark);
+                    darkModeToggle.textContent = isDark
+                        ? "☀️ Light Mode"
+                        : "🌙 Dark Mode";
+                });
+
+                // Modal functions
+                function showModal(member) {
+                    modalAvatar.textContent = member.id;
+                    modalName.textContent = member.name;
+                    modalId.textContent = `#${member.id}`;
+
+                    // Store photo path for avatar click
+                    modalAvatar.dataset.photo =
+                        member.photo || `images/${member.id}.jpg`;
+
+                    modalBody.innerHTML = `
+                        <div class="modal-field">
+                            <strong>📋 Số thứ tự</strong>
+                            <p>${member.id}</p>
+                        </div>
+                        <div class="modal-field">
+                            <strong>❤️ Sở thích</strong>
+                            <p>${member.hobbies}</p>
+                        </div>
+                        <div class="modal-field">
+                            <strong>🎓 Nguyện vọng đại học</strong>
+                            <p>${member.aspiration}</p>
+                        </div>
+                        <div class="modal-field">
+                            <strong>📚 Lựa chọn môn thi</strong>
+                            <p>${
+                                Array.isArray(member.subjects)
+                                    ? member.subjects.join(", ")
+                                    : member.subjects
+                            }</p>
+                        </div>
+                        <div class="modal-field">
+                            <strong>🎯 Điểm mong muốn</strong>
+                            <p>${
+                                member.desiredScore ??
+                                member.score ??
+                                "Chưa xác định"
+                            }</p>
+                        </div>
+                    `;
+
+                    modalOverlay.classList.add("show");
+                }
+
+                function closeModal() {
+                    modalOverlay.classList.remove("show");
+                }
+
+                modalClose.addEventListener("click", closeModal);
+                modalOverlay.addEventListener("click", (e) => {
+                    if (e.target === modalOverlay) closeModal();
+                });
+
+                // Add click event to modal avatar for image view
+                modalAvatar.addEventListener("click", () => {
+                    const photoPath = modalAvatar.dataset.photo;
+                    if (photoPath) {
+                        showImageModal(photoPath);
+                    }
+                });
+
+                document.addEventListener("keydown", (e) => {
+                    if (e.key === "Escape") {
+                        closeModal();
+                        closeImageModal();
+                    }
+                });
+
+                // Image modal functions
+                function showImageModal(imagePath) {
+                    imageModalImg.src = imagePath;
+                    imageModalOverlay.classList.add("show");
+                }
+
+                function closeImageModal() {
+                    imageModalOverlay.classList.remove("show");
+                    setTimeout(() => {
+                        imageModalImg.src = "";
+                    }, 500);
+                }
+
+                imageModalClose.addEventListener("click", closeImageModal);
+                imageModalOverlay.addEventListener("click", (e) => {
+                    if (
+                        e.target === imageModalOverlay ||
+                        e.target === imageModalContent
+                    ) {
+                        closeImageModal();
+                    }
+                });
 
                 async function loadMembers() {
                     try {
@@ -451,7 +852,9 @@
                         carousel.appendChild(imgComment);
 
                         card.innerHTML = `
-                        <div class="avatar">${m.id}</div>
+                        <div class="avatar" data-photo="${
+                            m.photo || `images/${m.id}.jpg`
+                        }">${m.id}</div>
                         <div class="details">
                             <h2>${m.name}</h2>
                             <p><strong>Sở thích:</strong> ${m.hobbies}</p>
@@ -490,7 +893,17 @@
                         if (diff === 0) {
                             card.classList.add("active");
                             card.style.pointerEvents = "auto";
-                            card.onclick = null;
+                            card.onclick = () => showModal(filteredMembers[i]);
+
+                            // Add click event to avatar for image view
+                            const avatar = card.querySelector(".avatar");
+                            if (avatar) {
+                                avatar.onclick = (e) => {
+                                    e.stopPropagation();
+                                    const photoPath = avatar.dataset.photo;
+                                    showImageModal(photoPath);
+                                };
+                            }
                         } else if (diff === filteredMembers.length - 1) {
                             card.classList.add("left");
                             card.style.pointerEvents = "auto";
@@ -594,6 +1007,7 @@
                 }
 
                 // Initialize
+                initDarkMode();
                 await loadMembers();
                 createCards();
                 attachSearch();
