@@ -47,18 +47,17 @@
                 color: white;
                 position: relative;
             }
-            
             .logo {
                 position: fixed;
                 top: 30px;
                 left: 30px;
-                width: 60px;
-                height: 60px;
+                width: 150px;
+                height: 150px;
                 border-radius: 50%;
                 overflow: hidden;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
                 z-index: 2000;
-                transition: all 0.3s;
+                transition: transform 1.2s ease-in-out, box-shadow 0.3s;
                 border: 3px solid rgba(255, 255, 255, 0.8);
             }
             .logo img {
@@ -67,15 +66,19 @@
                 object-fit: cover;
             }
             .logo:hover {
-                transform: scale(1.1) rotate(5deg);
-                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+                transform: rotate(360deg) scale(1.1);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
             }
             @media (max-width: 768px) {
                 .logo {
-                    width: 50px;
-                    height: 50px;
+                    width: 80px;
+                    height: 80px;
                     top: 20px;
                     left: 20px;
+                }
+                .dark-mode-toggle {
+                    top: 20px;
+                    right: 20px;
                 }
             }
             .dark-mode-toggle {
@@ -696,7 +699,7 @@
     <body>
         
         <div class="logo">
-            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Flequydonhdcfs%2F%3Flocale%3Dvi_VN&psig=AOvVaw17YjgoLGNvAiN4xx3akkR4&ust=1764001051200000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCOiOr5XWiJEDFQAAAAAdAAAAABAE" alt="Logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23667eea%22/%3E%3Ctext x=%2250%22 y=%2260%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22white%22 font-weight=%22bold%22%3E12A7%3C/text%3E%3C/svg%3E'" />
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Flequydonhdcfs%2F%3Flocale%3Dvi_VN&psig=AOvVaw17YjgoLGNvAiN4xx3akkR4&ust=1764001051200000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCOiOr5XWiJEDFQAAAAAdAAAAABAE" alt="Logo"/>
         </div>
         <div class="header">
             <button class="dark-mode-toggle" id="darkModeToggle">
