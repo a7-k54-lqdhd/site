@@ -225,7 +225,7 @@
             "Văn",
             "Anh"
         ],
-        "desiredScore": "9.5",
+        "desiredScore": "29.17",
         "photo": "images/19.jpg"
     },
     {
@@ -291,7 +291,7 @@
             "anh",
             "sử"
         ],
-        "desiredScore": "7",
+        "desiredScore": "1",
         "photo": "images/24.jpg"
     },
     {
@@ -425,10 +425,10 @@
     {
         "id": 36,
         "name": "Nguyễn Như Ngọc",
-        "hobbies": "NONE",
-        "aspiration": "NONE",
-        "subjects": [],
-        "desiredScore": "NONE",
+        "hobbies": "Ngủ",
+        "aspiration": "Nói ra mất linh",
+        "subjects": ["Toán", "Văn", "Lí", "Anh"],
+        "desiredScore": "10",
         "photo": "images/36.jpg"
     },
     {
